@@ -157,7 +157,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-6 lg:px-[6vw]">
+      <div className="relative z-10 h-full flex flex-col justify-center px-6 lg:px-[6vw] py-20 lg:py-0">
         {/* Big Stacked Word */}
         <div
           ref={headlineRef}
@@ -183,7 +183,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
             NAAR
           </div>
           <div
-            className="headline-line text-[clamp(48px,9vw,140px)] text-[#FF4D2E]"
+            className="headline-line text-[clamp(48px,9vw,140px)] text-[#00CED1]"
             style={{ opacity: 0 }}
           >
             STRALEN
@@ -199,14 +199,14 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         <div ref={ctaRef} className="mt-8 flex flex-wrap items-center gap-4" style={{ opacity: 0 }}>
           <button
             onClick={() => scrollToSection('contact')}
-            className="group bg-[#FF4D2E] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#e54326] transition-all flex items-center gap-2"
+            className="group bg-[#00CED1] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#00B8BB] transition-all flex items-center gap-2"
           >
             Plan een gratis intake
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
           <button
             onClick={() => scrollToSection('coaching')}
-            className="text-[#0B0F0B] font-ui text-sm uppercase tracking-wide-ui hover:text-[#FF4D2E] transition-colors flex items-center gap-2"
+            className="text-[#0B0F0B] font-ui text-sm uppercase tracking-wide-ui hover:text-[#00CED1] transition-colors flex items-center gap-2"
           >
             Bekijk aanbod
             <ArrowRight size={18} />

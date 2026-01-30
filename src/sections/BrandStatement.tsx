@@ -108,13 +108,13 @@ const BrandStatement = ({ className = '' }: BrandStatementProps) => {
       </div>
 
       {/* Content - Right Aligned */}
-      <div className="relative z-10 h-full flex flex-col justify-center items-end px-6 lg:px-[6vw]">
+      <div className="relative z-10 h-full flex flex-col justify-center items-end px-6 lg:px-[6vw] py-20 lg:py-0">
         {/* Big Stacked Word */}
         <div
           ref={headlineRef}
           className="font-display font-black uppercase tracking-tight-display leading-[0.9] text-right"
         >
-          <div className="text-[clamp(48px,9vw,140px)] text-[#FF4D2E]">MOVE</div>
+          <div className="text-[clamp(48px,9vw,140px)] text-[#00CED1]">MOVE</div>
           <div className="text-[clamp(48px,9vw,140px)] text-[#0B0F0B]">TO</div>
           <div className="text-[clamp(48px,9vw,140px)] text-[#0B0F0B]">FIT</div>
         </div>

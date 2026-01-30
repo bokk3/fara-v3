@@ -134,7 +134,7 @@ const AboutSection = ({ className = '' }: AboutSectionProps) => {
             className="font-display font-black uppercase tracking-tight-display leading-[0.9]"
           >
             <div className="text-[clamp(42px,8vw,120px)] text-white">OVER</div>
-            <div className="text-[clamp(42px,8vw,120px)] text-[#FF4D2E]">FARA</div>
+            <div className="text-[clamp(42px,8vw,120px)] text-[#00CED1]">FARA</div>
           </div>
 
           {/* Body */}
@@ -150,14 +150,14 @@ const AboutSection = ({ className = '' }: AboutSectionProps) => {
           <div ref={ctaRef} className="mt-8 flex flex-wrap items-center gap-4">
             <button
               onClick={scrollToContact}
-              className="group bg-[#FF4D2E] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#e54326] transition-all flex items-center gap-2"
+              className="group bg-[#00CED1] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#00B8BB] transition-all flex items-center gap-2"
             >
               Lees meer
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={scrollToQualifications}
-              className="text-white/80 font-ui text-sm uppercase tracking-wide-ui hover:text-[#FF4D2E] transition-colors flex items-center gap-2"
+              className="text-white/80 font-ui text-sm uppercase tracking-wide-ui hover:text-[#00CED1] transition-colors flex items-center gap-2"
             >
               <Award size={18} />
               Bekijk kwalificaties

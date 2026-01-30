@@ -111,17 +111,17 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
             >
               <div className="text-[clamp(42px,7vw,100px)] text-white">KLAAR</div>
               <div className="text-[clamp(42px,7vw,100px)] text-white">OM TE</div>
-              <div className="text-[clamp(42px,7vw,100px)] text-[#FF4D2E]">STARTEN?</div>
+              <div className="text-[clamp(42px,7vw,100px)] text-[#00CED1]">STARTEN?</div>
             </div>
 
             {/* Contact Info */}
             <div ref={contactRef} className="mt-12 space-y-4">
               <div className="contact-item flex items-center gap-3 text-white/80">
-                <Mail size={20} className="text-[#FF4D2E]" />
+                <Mail size={20} className="text-[#00CED1]" />
                 <span>info@movetofit.be</span>
               </div>
               <div className="contact-item flex items-center gap-3 text-white/80">
-                <Phone size={20} className="text-[#FF4D2E]" />
+                <Phone size={20} className="text-[#00CED1]" />
                 <span>+32 000 00 00 00</span>
               </div>
               <div className="contact-item mt-6 text-white/60 text-sm">
@@ -150,7 +150,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   value={formData.naam}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#FF4D2E] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#00CED1] focus:outline-none transition-colors"
                   placeholder="Jouw naam"
                 />
               </div>
@@ -165,7 +165,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#FF4D2E] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#00CED1] focus:outline-none transition-colors"
                   placeholder="jouw@email.be"
                 />
               </div>
@@ -179,7 +179,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   value={formData.onderwerp}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#FF4D2E] focus:outline-none transition-colors bg-white"
+                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#00CED1] focus:outline-none transition-colors bg-white"
                 >
                   <option value="">Kies een onderwerp</option>
                   <option value="coaching">Personal Coaching</option>
@@ -199,7 +199,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#FF4D2E] focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#00CED1] focus:outline-none transition-colors resize-none"
                   placeholder="Vertel meer over jouw doelen..."
                 />
               </div>
@@ -207,7 +207,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button
                   type="submit"
-                  className="group flex-1 bg-[#FF4D2E] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#e54326] transition-all flex items-center justify-center gap-2"
+                  className="group flex-1 bg-[#00CED1] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#00B8BB] transition-all flex items-center justify-center gap-2"
                 >
                   <Send size={18} />
                   Verstuur bericht
@@ -217,7 +217,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
               <button
                 type="button"
                 onClick={() => setShowDialog(true)}
-                className="w-full border-2 border-[#FF4D2E] text-[#FF4D2E] font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#FF4D2E] hover:text-white transition-all flex items-center justify-center gap-2"
+                className="w-full border-2 border-[#00CED1] text-[#00CED1] font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#00CED1] hover:text-white transition-all flex items-center justify-center gap-2"
               >
                 <Calendar size={18} />
                 Plan direct een intake
@@ -251,7 +251,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
           <div className="flex justify-center pt-4">
             <button
               onClick={() => setShowDialog(false)}
-              className="bg-[#FF4D2E] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3 rounded-[14px] hover:bg-[#e54326] transition-colors"
+              className="bg-[#00CED1] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3 rounded-[14px] hover:bg-[#00B8BB] transition-colors"
             >
               Sluiten
             </button>

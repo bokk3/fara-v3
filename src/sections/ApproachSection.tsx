@@ -142,7 +142,7 @@ const ApproachSection = ({ className = '' }: ApproachSectionProps) => {
                   key={number}
                   className="step-item flex items-start gap-4"
                 >
-                  <div className="w-10 h-10 rounded-full bg-[#FF4D2E] text-white font-display font-bold text-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#00CED1] text-white font-display font-bold text-lg flex items-center justify-center flex-shrink-0">
                     {number}
                   </div>
                   <div>

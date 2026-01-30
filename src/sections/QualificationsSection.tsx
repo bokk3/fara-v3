@@ -149,7 +149,7 @@ const QualificationsSection = ({ className = '' }: QualificationsSectionProps) =
                 className="qual-card bg-white rounded-[28px] card-shadow p-6 flex items-start gap-4"
               >
                 <div className="w-12 h-12 rounded-full bg-[#F6FBF6] flex items-center justify-center flex-shrink-0">
-                  <Icon size={24} className="text-[#FF4D2E]" />
+                  <Icon size={24} className="text-[#00CED1]" />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-lg text-[#0B0F0B]">
