@@ -16,6 +16,20 @@ const BrandStatement = ({ className = '' }: BrandStatementProps) => {
   const bgRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
+    // Only enable scroll animations on desktop (lg breakpoint = 1024px)
+    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+    
+    if (!isDesktop) {
+      // On mobile, just show everything immediately
+      gsap.set([headlineRef.current, taglineRef.current, bgRef.current], {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        scale: 1,
+      });
+      return;
+    }
+
     const ctx = gsap.context(() => {
       const scrollTl = gsap.timeline({
         scrollTrigger: {
@@ -43,13 +57,6 @@ const BrandStatement = ({ className = '' }: BrandStatementProps) => {
       );
 
       scrollTl.fromTo(
-        pillRef.current,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, ease: 'none' },
-        0.15
-      );
-
-      scrollTl.fromTo(
         bgRef.current,
         { scale: 1.08, opacity: 0.7 },
         { scale: 1, opacity: 1, ease: 'none' },
@@ -68,13 +75,6 @@ const BrandStatement = ({ className = '' }: BrandStatementProps) => {
 
       scrollTl.fromTo(
         taglineRef.current,
-        { y: 0, opacity: 1 },
-        { y: '10vh', opacity: 0, ease: 'power2.in' },
-        0.7
-      );
-
-      scrollTl.fromTo(
-        pillRef.current,
         { y: 0, opacity: 1 },
         { y: '10vh', opacity: 0, ease: 'power2.in' },
         0.7

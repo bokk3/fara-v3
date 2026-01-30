@@ -59,8 +59,13 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
     return () => ctx.revert();
   }, []);
 
-  // Scroll-driven exit animation
+  // Scroll-driven exit animation (desktop only)
   useLayoutEffect(() => {
+    // Only enable scroll animations on desktop (lg breakpoint = 1024px)
+    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+    
+    if (!isDesktop) return;
+
     const ctx = gsap.context(() => {
       const scrollTl = gsap.timeline({
         scrollTrigger: {
