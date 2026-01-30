@@ -119,14 +119,6 @@ const BrandStatement = ({ className = '' }: BrandStatementProps) => {
           <div className="text-[clamp(48px,9vw,140px)] text-[#0B0F0B]">FIT</div>
         </div>
 
-        {/* Pill */}
-        <span
-          ref={pillRef}
-          className="mt-8 inline-block bg-[#0B0F0B] text-white font-ui text-xs uppercase tracking-[0.14em] px-4 py-2 rounded-full"
-        >
-          Turnhout
-        </span>
-
         {/* Tagline */}
         <p
           ref={taglineRef}

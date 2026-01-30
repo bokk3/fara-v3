@@ -187,7 +187,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
 
         {/* Subheadline */}
         <p className="mt-8 lg:mt-12 text-lg lg:text-xl text-[#3A4A3A] max-w-md">
-          Personal coaching + groepslessen in Turnhout.
+          Personal coaching + groepslessen op maat.
         </p>
 
         {/* CTA Row */}

@@ -235,7 +235,6 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
           </div>
           <div className="text-white/60 text-sm text-center lg:text-right">
             <p>© 2024 Move to Fit. Alle rechten voorbehouden.</p>
-            <p className="mt-1">Turnhout, België</p>
           </div>
         </div>
       </div>
