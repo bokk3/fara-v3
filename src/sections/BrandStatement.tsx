@@ -12,7 +12,6 @@ const BrandStatement = ({ className = '' }: BrandStatementProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLDivElement>(null);
   const taglineRef = useRef<HTMLParagraphElement>(null);
-  const pillRef = useRef<HTMLSpanElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
