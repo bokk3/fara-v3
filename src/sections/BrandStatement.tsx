@@ -34,61 +34,56 @@ const BrandStatement = ({ className = '' }: BrandStatementProps) => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: '+=130%',
+          end: '+=100%',
           pin: true,
-          scrub: 0.6,
+          scrub: 1,
           snap: {
-            snapTo: [0, 0.3, 0.7, 1],
+            snapTo: [0, 0.5, 1],
             duration: { min: 0.2, max: 0.4 },
-            ease: 'power2.inOut',
+            ease: 'power1.inOut',
           },
         },
       });
 
-      // ENTRANCE (0%-30%)
+      // ENTRANCE (0%-50%)
       scrollTl.fromTo(
         headlineRef.current,
         { x: '60vw', opacity: 0, scale: 0.96 },
-        { x: 0, opacity: 1, scale: 1, ease: 'none' },
+        { x: 0, opacity: 1, scale: 1, ease: 'power2.out', duration: 0.5 },
         0
       );
 
       scrollTl.fromTo(
         taglineRef.current,
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, ease: 'none' },
+        { y: 0, opacity: 1, ease: 'power2.out', duration: 0.4 },
         0.1
       );
 
       scrollTl.fromTo(
         bgRef.current,
         { scale: 1.08, opacity: 0.7 },
-        { scale: 1, opacity: 1, ease: 'none' },
+        { scale: 1, opacity: 1, ease: 'power2.out', duration: 0.5 },
         0
       );
 
-      // SETTLE (30%-70%): Static - no animation needed
-
-      // EXIT (70%-100%)
-      scrollTl.fromTo(
+      // EXIT (50%-100%)
+      scrollTl.to(
         headlineRef.current,
-        { x: 0, opacity: 1 },
-        { x: '40vw', opacity: 0, ease: 'power2.in' },
-        0.7
+        { x: '40vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
+        0.5
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         taglineRef.current,
-        { y: 0, opacity: 1 },
-        { y: '10vh', opacity: 0, ease: 'power2.in' },
-        0.7
+        { y: '10vh', opacity: 0, ease: 'power2.in', duration: 0.5 },
+        0.5
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         bgRef.current,
-        { scale: 1, x: 0 },
-        { scale: 1.05, x: '-6vw', ease: 'none' },
-        0.7
+        { scale: 1.05, x: '-6vw', ease: 'power2.in', duration: 0.5 },
+        0.5
       );
     }, sectionRef);
 

@@ -39,103 +39,95 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: '+=130%',
+          end: '+=100%',
           pin: true,
-          scrub: 0.6,
+          scrub: 1,
           snap: {
-            snapTo: [0, 0.3, 0.7, 1],
+            snapTo: [0, 0.5, 1],
             duration: { min: 0.2, max: 0.4 },
-            ease: 'power2.inOut',
+            ease: 'power1.inOut',
           },
         },
       });
 
-      // ENTRANCE (0%-30%)
+      // ENTRANCE (0%-50%)
       scrollTl.fromTo(
         headlineRef.current,
         { x: '-60vw', opacity: 0 },
-        { x: 0, opacity: 1, ease: 'none' },
+        { x: 0, opacity: 1, ease: 'power2.out', duration: 0.5 },
         0
       );
 
       scrollTl.fromTo(
         bodyRef.current,
         { x: '-40vw', opacity: 0 },
-        { x: 0, opacity: 1, ease: 'none' },
+        { x: 0, opacity: 1, ease: 'power2.out', duration: 0.45 },
         0.05
       );
 
       scrollTl.fromTo(
         bulletsRef.current,
         { x: '-30vw', opacity: 0 },
-        { x: 0, opacity: 1, ease: 'none' },
+        { x: 0, opacity: 1, ease: 'power2.out', duration: 0.4 },
         0.1
       );
 
       scrollTl.fromTo(
         ctaRef.current,
         { x: '-20vw', opacity: 0 },
-        { x: 0, opacity: 1, ease: 'none' },
+        { x: 0, opacity: 1, ease: 'power2.out', duration: 0.35 },
         0.15
       );
 
       scrollTl.fromTo(
         cardRef.current,
         { x: '60vw', opacity: 0, rotate: 1.5 },
-        { x: 0, opacity: 1, rotate: 0, ease: 'none' },
+        { x: 0, opacity: 1, rotate: 0, ease: 'power2.out', duration: 0.45 },
         0.05
       );
 
       scrollTl.fromTo(
         bgRef.current,
         { scale: 1.08 },
-        { scale: 1, ease: 'none' },
+        { scale: 1, ease: 'power2.out', duration: 0.5 },
         0
       );
 
-      // SETTLE (30%-70%): Static
-
-      // EXIT (70%-100%)
-      scrollTl.fromTo(
+      // EXIT (50%-100%)
+      scrollTl.to(
         headlineRef.current,
-        { x: 0, opacity: 1 },
-        { x: '-35vw', opacity: 0, ease: 'power2.in' },
-        0.7
+        { x: '-35vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
+        0.5
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         bodyRef.current,
-        { x: 0, opacity: 1 },
-        { x: '-35vw', opacity: 0, ease: 'power2.in' },
-        0.7
+        { x: '-35vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
+        0.5
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         bulletsRef.current,
-        { x: 0, opacity: 1 },
-        { x: '-35vw', opacity: 0, ease: 'power2.in' },
-        0.7
+        { x: '-35vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
+        0.5
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         ctaRef.current,
-        { x: 0, opacity: 1 },
-        { x: '-35vw', opacity: 0, ease: 'power2.in' },
-        0.7
+        { x: '-35vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
+        0.5
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         cardRef.current,
-        { x: 0, opacity: 1 },
-        { x: '35vw', opacity: 0, ease: 'power2.in' },
-        0.7
+        { x: '35vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
+        0.5
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         bgRef.current,
-        { scale: 1, x: 0 },
-        { scale: 1.06, x: '6vw', ease: 'none' },
-        0.7
+        { scale: 1.06, x: '6vw', ease: 'power2.in', duration: 0.5 },
+        0.5
       );
     }, sectionRef);
 

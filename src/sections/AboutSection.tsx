@@ -22,75 +22,71 @@ const AboutSection = ({ className = '' }: AboutSectionProps) => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: '+=130%',
+          end: '+=100%',
           pin: true,
-          scrub: 0.6,
+          scrub: 1,
           snap: {
-            snapTo: [0, 0.3, 0.7, 1],
+            snapTo: [0, 0.5, 1],
             duration: { min: 0.2, max: 0.4 },
-            ease: 'power2.inOut',
+            ease: 'power1.inOut',
           },
         },
       });
 
-      // ENTRANCE (0%-30%)
+      // ENTRANCE (0%-40%)
       scrollTl.fromTo(
         portraitRef.current,
         { x: '-60vw', opacity: 0, scale: 0.98 },
-        { x: 0, opacity: 1, scale: 1, ease: 'none' },
+        { x: 0, opacity: 1, scale: 1, ease: 'power2.out', duration: 0.4 },
         0
       );
 
       scrollTl.fromTo(
         headlineRef.current,
         { x: '60vw', opacity: 0 },
-        { x: 0, opacity: 1, ease: 'none' },
+        { x: 0, opacity: 1, ease: 'power2.out', duration: 0.4 },
         0.05
       );
 
       scrollTl.fromTo(
         bodyRef.current,
         { y: 18, opacity: 0 },
-        { y: 0, opacity: 1, ease: 'none' },
+        { y: 0, opacity: 1, ease: 'power2.out', duration: 0.3 },
         0.1
       );
 
       scrollTl.fromTo(
         ctaRef.current,
         { y: 18, opacity: 0 },
-        { y: 0, opacity: 1, ease: 'none' },
+        { y: 0, opacity: 1, ease: 'power2.out', duration: 0.3 },
         0.15
       );
 
-      // SETTLE (30%-70%): Static
+      // SETTLE (40%-60%): Static
 
-      // EXIT (70%-100%)
-      scrollTl.fromTo(
+      // EXIT (60%-100%)
+      scrollTl.to(
         portraitRef.current,
-        { x: 0, opacity: 1 },
-        { x: '-35vw', opacity: 0, ease: 'power2.in' },
-        0.7
+        { x: '-35vw', opacity: 0, ease: 'power2.in', duration: 0.4 },
+        0.6
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         headlineRef.current,
-        { x: 0, opacity: 1 },
-        { x: '35vw', opacity: 0, ease: 'power2.in' },
-        0.7
+        { x: '35vw', opacity: 0, ease: 'power2.in', duration: 0.4 },
+        0.6
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         bodyRef.current,
-        { y: 0, opacity: 1 },
-        { y: '10vh', opacity: 0, ease: 'power2.in' },
-        0.7
+        { y: '10vh', opacity: 0, ease: 'power2.in', duration: 0.4 },
+        0.6
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         ctaRef.current,
-        { y: 0, opacity: 1 },
-        { y: '10vh', opacity: 0, ease: 'power2.in' },
-        0.7
+        { y: '10vh', opacity: 0, ease: 'power2.in', duration: 0.4 },
+        0.6
       );
     }, sectionRef);
 

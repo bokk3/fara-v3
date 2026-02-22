@@ -71,13 +71,13 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: '+=130%',
+          end: '+=100%',
           pin: true,
-          scrub: 0.6,
+          scrub: 1,
           snap: {
-            snapTo: [0, 0.3, 0.7, 1],
+            snapTo: [0, 0.5, 1],
             duration: { min: 0.2, max: 0.4 },
-            ease: 'power2.inOut',
+            ease: 'power1.inOut',
           },
           onLeaveBack: () => {
             // Reset all elements to visible when scrolling back to top
@@ -94,39 +94,34 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         },
       });
 
-      // ENTRANCE (0%-30%): Hold - no changes (matches load end state)
-      // SETTLE (30%-70%): Static
+      // ENTRANCE (0%-50%): Hold - no changes (matches load end state)
 
-      // EXIT (70%-100%)
+      // EXIT (50%-100%)
       const lines = headlineRef.current?.querySelectorAll('.headline-line');
       if (lines) {
-        scrollTl.fromTo(
+        scrollTl.to(
           lines,
-          { x: 0, opacity: 1 },
-          { x: '-55vw', opacity: 0, ease: 'power2.in' },
-          0.7
+          { x: '-55vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
+          0.5
         );
       }
 
-      scrollTl.fromTo(
+      scrollTl.to(
         ctaRef.current,
-        { y: 0, opacity: 1 },
-        { y: '10vh', opacity: 0, ease: 'power2.in' },
-        0.7
+        { y: '10vh', opacity: 0, ease: 'power2.in', duration: 0.5 },
+        0.5
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         bgRef.current,
-        { scale: 1, x: 0 },
-        { scale: 1.06, x: '8vw', ease: 'none' },
-        0.7
+        { scale: 1.06, x: '8vw', ease: 'power2.in', duration: 0.5 },
+        0.5
       );
 
-      scrollTl.fromTo(
+      scrollTl.to(
         scrollHintRef.current,
-        { opacity: 1 },
-        { opacity: 0, ease: 'power2.in' },
-        0.7
+        { opacity: 0, ease: 'power2.in', duration: 0.3 },
+        0.5
       );
     }, sectionRef);
 

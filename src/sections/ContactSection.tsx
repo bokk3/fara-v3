@@ -228,13 +228,58 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
       </div>
 
       {/* Footer */}
-      <div className="mt-20 pt-8 border-t border-white/10 px-6 lg:px-[6vw]">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-          <div className="font-display font-bold text-white text-lg">
-            Move to Fit
+      <div className="mt-32 pt-12 border-t border-white/20 px-6 lg:px-[6vw]">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-4">
+          {/* Brand */}
+          <div className="flex flex-col gap-3">
+            <div className="font-display font-black text-2xl text-white">
+              Move to Fit
+            </div>
+            <p className="text-white/60 text-sm max-w-xs">
+              Coaching die écht bij je past. Van stilzitten naar stralen.
+            </p>
           </div>
-          <div className="text-white/60 text-sm text-center lg:text-right">
+
+          {/* Quick Links */}
+          <div className="flex flex-col gap-2">
+            <h4 className="font-ui text-xs uppercase tracking-wide-ui text-white/40 mb-1">
+              Navigatie
+            </h4>
+            <a href="#coaching" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm">
+              Coaching
+            </a>
+            <a href="#groep" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm">
+              Groepslessen
+            </a>
+            <a href="#begeleiding" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm">
+              Begeleiding
+            </a>
+            <a href="#over" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm">
+              Over Fara
+            </a>
+          </div>
+
+          {/* Contact */}
+          <div className="flex flex-col gap-2">
+            <h4 className="font-ui text-xs uppercase tracking-wide-ui text-white/40 mb-1">
+              Contact
+            </h4>
+            <a href="mailto:info@movetofit.be" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm flex items-center gap-2">
+              <Mail size={14} />
+              info@movetofit.be
+            </a>
+            <a href="tel:+32471052609" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm flex items-center gap-2">
+              <Phone size={14} />
+              +32 471 05 26 09
+            </a>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-12 pt-6 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-white/40 text-xs">
             <p>© {new Date().getFullYear()} Move to Fit. Alle rechten voorbehouden.</p>
+            <p>Gemaakt met ❤️ voor beweging</p>
           </div>
         </div>
       </div>
