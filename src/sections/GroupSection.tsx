@@ -173,7 +173,7 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
           className="font-display font-black uppercase tracking-tight-display leading-[0.9] text-right"
         >
           <div className="text-[clamp(42px,8vw,120px)] text-[#0B0F0B]">GROEPS</div>
-          <div className="text-[clamp(42px,8vw,120px)] text-[#3AAFA9]">LESSEN</div>
+          <div className="text-[clamp(42px,8vw,120px)] text-[#3AAFA9] text-shine-subtle">LESSEN</div>
         </div>
 
         {/* Subheadline */}

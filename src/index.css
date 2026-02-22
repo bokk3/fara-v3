@@ -89,6 +89,46 @@
     background-color: #F4A261;
   }
   
+  .text-shine {
+    background: linear-gradient(
+      90deg,
+      #E76F51 0%,
+      #E76F51 30%,
+      #FFE5B4 50%,
+      #E76F51 70%,
+      #E76F51 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shine 4s ease-in-out infinite;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3)) 
+            drop-shadow(0 0 10px rgba(231, 111, 81, 0.3));
+  }
+  
+  .text-shine-subtle {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2)) 
+            drop-shadow(0 0 6px rgba(58, 175, 169, 0.2));
+  }
+  
+  .text-shine-warm {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2)) 
+            drop-shadow(0 0 6px rgba(244, 162, 97, 0.2));
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 100% center;
+    }
+    20% {
+      background-position: -100% center;
+    }
+    100% {
+      background-position: -100% center;
+    }
+  }
+  
   .card-shadow {
     box-shadow: 0 18px 45px rgba(11, 15, 11, 0.10);
   }

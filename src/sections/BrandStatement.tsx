@@ -110,7 +110,7 @@ const BrandStatement = ({ className = '' }: BrandStatementProps) => {
           ref={headlineRef}
           className="font-display font-black uppercase tracking-tight-display leading-[0.9] text-right"
         >
-          <div className="text-[clamp(48px,9vw,140px)] text-[#F4A261]">MOVE</div>
+          <div className="text-[clamp(48px,9vw,140px)] text-[#F4A261] text-shine-warm">MOVE</div>
           <div className="text-[clamp(48px,9vw,140px)] text-[#0B0F0B]">TO</div>
           <div className="text-[clamp(48px,9vw,140px)] text-[#0B0F0B]">FIT</div>
         </div>

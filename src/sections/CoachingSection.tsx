@@ -151,7 +151,7 @@ const CoachingSection = ({ className = '' }: CoachingSectionProps) => {
           className="font-display font-black uppercase tracking-tight-display leading-[0.9]"
         >
           <div className="text-[clamp(42px,8vw,120px)] text-[#0B0F0B]">COACHING</div>
-          <div className="text-[clamp(42px,8vw,120px)] text-[#3AAFA9]">OP MAAT</div>
+          <div className="text-[clamp(42px,8vw,120px)] text-[#3AAFA9] text-shine-subtle">OP MAAT</div>
         </div>
 
         {/* Body */}

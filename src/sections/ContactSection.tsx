@@ -134,7 +134,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
             >
               <div className="text-[clamp(42px,7vw,100px)] text-white">KLAAR</div>
               <div className="text-[clamp(42px,7vw,100px)] text-white">OM TE</div>
-              <div className="text-[clamp(42px,7vw,100px)] text-[#E76F51]">STARTEN?</div>
+              <div className="text-[clamp(42px,7vw,100px)] text-[#E76F51] text-shine-warm">STARTEN?</div>
             </div>
 
             {/* Contact Info */}

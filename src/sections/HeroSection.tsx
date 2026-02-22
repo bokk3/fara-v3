@@ -139,7 +139,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
             NAAR
           </div>
           <div
-            className="headline-line text-[clamp(42px,7.5vw,140px)] text-[#E76F51]"
+            className="headline-line text-[clamp(42px,7.5vw,140px)] text-shine"
             style={{ opacity: 0 }}
           >
             STRALEN
