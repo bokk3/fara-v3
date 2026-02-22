@@ -74,6 +74,11 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
           end: '+=130%',
           pin: true,
           scrub: 0.6,
+          snap: {
+            snapTo: [0, 0.3, 0.7, 1],
+            duration: { min: 0.2, max: 0.4 },
+            ease: 'power2.inOut',
+          },
           onLeaveBack: () => {
             // Reset all elements to visible when scrolling back to top
             const lines = headlineRef.current?.querySelectorAll('.headline-line');
@@ -165,25 +170,25 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
           style={{ marginTop: '-5vh' }}
         >
           <div
-            className="headline-line text-[clamp(48px,9vw,140px)] text-[#0B0F0B]"
+            className="headline-line text-[clamp(42px,7.5vw,140px)] text-[#0B0F0B]"
             style={{ opacity: 0 }}
           >
             VAN
           </div>
           <div
-            className="headline-line text-[clamp(48px,9vw,140px)] text-[#0B0F0B]"
+            className="headline-line text-[clamp(42px,7.5vw,140px)] text-[#0B0F0B]"
             style={{ opacity: 0 }}
           >
             STILZITTEN
           </div>
           <div
-            className="headline-line text-[clamp(48px,9vw,140px)] text-[#0B0F0B]"
+            className="headline-line text-[clamp(42px,7.5vw,140px)] text-[#0B0F0B]"
             style={{ opacity: 0 }}
           >
             NAAR
           </div>
           <div
-            className="headline-line text-[clamp(48px,9vw,140px)] text-[#00CED1]"
+            className="headline-line text-[clamp(42px,7.5vw,140px)] text-[#00CED1]"
             style={{ opacity: 0 }}
           >
             STRALEN

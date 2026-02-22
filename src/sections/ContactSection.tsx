@@ -234,7 +234,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
             Move to Fit
           </div>
           <div className="text-white/60 text-sm text-center lg:text-right">
-            <p>© 2024 Move to Fit. Alle rechten voorbehouden.</p>
+            <p>© {new Date().getFullYear()} Move to Fit. Alle rechten voorbehouden.</p>
           </div>
         </div>
       </div>

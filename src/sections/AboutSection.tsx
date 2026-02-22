@@ -25,6 +25,11 @@ const AboutSection = ({ className = '' }: AboutSectionProps) => {
           end: '+=130%',
           pin: true,
           scrub: 0.6,
+          snap: {
+            snapTo: [0, 0.3, 0.7, 1],
+            duration: { min: 0.2, max: 0.4 },
+            ease: 'power2.inOut',
+          },
         },
       });
 
@@ -122,7 +127,7 @@ const AboutSection = ({ className = '' }: AboutSectionProps) => {
           <img
             src="/images/portrait_fara.jpg"
             alt="Fara - Move to Fit coach"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-[center_35%]"
           />
         </div>
 
