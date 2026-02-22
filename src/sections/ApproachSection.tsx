@@ -108,8 +108,8 @@ const ApproachSection = ({ className = '' }: ApproachSectionProps) => {
   const steps = [
     { number: '1', title: 'Intake', desc: 'Kennismaken en doelen bepalen' },
     { number: '2', title: 'Plan op maat', desc: 'Persoonlijk programma samenstellen' },
-    { number: '3', title: 'Trainen met feedback', desc: 'Begeleiding en bijsturing' },
-    { number: '4', title: 'Blijven groeien', desc: 'Resultaten boeken en doorontwikkelen' },
+    { number: '3', title: 'bewegen op maat', desc: 'Begeleiding en bijsturing' },
+    { number: '4', title: 'Blijven groeien', desc: 'Nieuwe gewoonten kweken en stralen!' },
   ];
 
   return (

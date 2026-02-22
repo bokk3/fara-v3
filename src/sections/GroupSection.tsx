@@ -208,7 +208,7 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
             onClick={scrollToContact}
             className="group bg-[#00CED1] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#00B8BB] transition-all flex items-center gap-2"
           >
-            Bekijk het rooster
+            Plan een proefles
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

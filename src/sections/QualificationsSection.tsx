@@ -104,7 +104,7 @@ const QualificationsSection = ({ className = '' }: QualificationsSectionProps) =
     {
       icon: Heart,
       title: 'EHBO',
-      subtitle: 'Wit-Gele Kruis',
+      subtitle: 'Rode Kruis',
     },
     {
       icon: Apple,

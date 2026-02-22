@@ -144,9 +144,9 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
   };
 
   const bullets = [
-    { icon: Briefcase, text: 'Bewegen op de werkvloer' },
-    { icon: Coffee, text: 'Gezond vergaderen' },
-    { icon: Users, text: 'Workshops & teambuilding' },
+    { icon: Briefcase, text: 'Bewegen op de werkvloer, gezond vergaderen' },
+    { icon: Coffee, text: 'sportdag (hele/halve dag)' },
+    { icon: Users, text: 'Workshops & teambuilding (dans, zumba, fitness, ontspanning)' },
   ];
 
   return (
@@ -180,8 +180,7 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
         {/* Body */}
         <div ref={bodyRef} className="mt-8 max-w-lg">
           <p className="text-lg text-[#3A4A3A]">
-            Voor bedrijven, teams en organisaties die inzetten op fitte medewerkers.
-          </p>
+            Voor bedrijven, teams en organisaties die op zoek zijn naar fitte activiteiten.</p>
         </div>
 
         {/* Bullets */}
