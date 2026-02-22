@@ -179,7 +179,7 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
           className="font-display font-black uppercase tracking-tight-display leading-[0.9] text-right"
         >
           <div className="text-[clamp(42px,8vw,120px)] text-[#0B0F0B]">GROEPS</div>
-          <div className="text-[clamp(42px,8vw,120px)] text-[#00CED1]">LESSEN</div>
+          <div className="text-[clamp(42px,8vw,120px)] text-[#3AAFA9]">LESSEN</div>
         </div>
 
         {/* Subheadline */}
@@ -187,26 +187,27 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
           ref={subheadlineRef}
           className="mt-6 text-xl lg:text-2xl text-[#3A4A3A] text-right max-w-md"
         >
-          Dans, conditie, kracht—voor elk niveau.
+          Druk jezelf uit door beweging met professionele groepslessen. Van beginners tot gevorderden, Move to Fit biedt sport- en beweegactiviteiten aan in verschillende vormen die technische vaardigheden combineren met creatieve expressie.
         </p>
 
         {/* Class Chips */}
         <div ref={chipsRef} className="mt-8 flex flex-wrap justify-end gap-3">
-          {classes.map((cls) => (
-            <span
-              key={cls}
-              className="chip inline-block bg-white/90 backdrop-blur-sm text-[#0B0F0B] font-ui text-sm px-4 py-2 rounded-full border border-[#0B0F0B]/10"
-            >
-              {cls}
-            </span>
-          ))}
+          <span className="chip inline-block bg-white/90 backdrop-blur-sm text-[#0B0F0B] font-ui text-sm px-4 py-2 rounded-full border border-[#0B0F0B]/10">
+            Conditiesport (Aerobics, BBB, Intervaltraining, Zumba, ...)
+          </span>
+          <span className="chip inline-block bg-white/90 backdrop-blur-sm text-[#0B0F0B] font-ui text-sm px-4 py-2 rounded-full border border-[#0B0F0B]/10">
+            Danslés (Start to dance, Jazz, ...)
+          </span>
+          <span className="chip inline-block bg-white/90 backdrop-blur-sm text-[#0B0F0B] font-ui text-sm px-4 py-2 rounded-full border border-[#0B0F0B]/10">
+            Kracht- en stabiliteitstraining
+          </span>
         </div>
 
         {/* CTA */}
         <div ref={ctaRef} className="mt-8">
           <button
             onClick={scrollToContact}
-            className="group bg-[#00CED1] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#00B8BB] transition-all flex items-center gap-2"
+            className="group bg-[#3AAFA9] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#2D9B9B] transition-all flex items-center gap-2"
           >
             Plan een proefles
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -224,7 +225,7 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-full bg-[#F6FBF6] flex items-center justify-center flex-shrink-0">
-                <Users size={16} className="text-[#00CED1]" />
+                <Users size={16} className="text-[#3AAFA9]" />
               </div>
               <div>
                 <p className="font-medium text-[#0B0F0B]">Kleine groepen</p>
@@ -233,7 +234,7 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
             </li>
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-full bg-[#F6FBF6] flex items-center justify-center flex-shrink-0">
-                <Sparkles size={16} className="text-[#00CED1]" />
+                <Sparkles size={16} className="text-[#3AAFA9]" />
               </div>
               <div>
                 <p className="font-medium text-[#0B0F0B]">Techniek + fun</p>
@@ -242,7 +243,7 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
             </li>
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-full bg-[#F6FBF6] flex items-center justify-center flex-shrink-0">
-                <DoorOpen size={16} className="text-[#00CED1]" />
+                <DoorOpen size={16} className="text-[#3AAFA9]" />
               </div>
               <div>
                 <p className="font-medium text-[#0B0F0B]">Flexibele instap</p>
@@ -252,7 +253,7 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
           </ul>
           <button
             onClick={scrollToContact}
-            className="mt-6 text-[#00CED1] font-ui text-sm uppercase tracking-wide-ui hover:underline flex items-center gap-2"
+            className="mt-6 text-[#3AAFA9] font-ui text-sm uppercase tracking-wide-ui hover:underline flex items-center gap-2"
           >
             Vraag proefles aan
             <ArrowRight size={16} />

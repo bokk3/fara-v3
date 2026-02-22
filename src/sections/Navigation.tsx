@@ -55,14 +55,14 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="font-ui text-sm uppercase tracking-wide-ui text-[#3A4A3A] hover:text-[#00CED1] transition-colors"
+                  className="font-ui text-sm uppercase tracking-wide-ui text-[#3A4A3A] hover:text-[#3AAFA9] transition-colors"
                 >
                   {item.label}
                 </button>
               ))}
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-[#00CED1] text-white font-ui text-sm uppercase tracking-wide-ui px-5 py-2.5 rounded-[14px] hover:bg-[#00B8BB] transition-colors"
+                className="bg-[#3AAFA9] text-white font-ui text-sm uppercase tracking-wide-ui px-5 py-2.5 rounded-[14px] hover:bg-[#2D9B9B] transition-colors"
               >
                 Plan intake
               </button>
@@ -90,14 +90,14 @@ const Navigation = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="font-display font-bold text-2xl text-[#0B0F0B] hover:text-[#00CED1] transition-colors"
+              className="font-display font-bold text-2xl text-[#0B0F0B] hover:text-[#3AAFA9] transition-colors"
             >
               {item.label}
             </button>
           ))}
           <button
             onClick={() => scrollToSection('contact')}
-            className="mt-4 bg-[#00CED1] text-white font-ui text-lg uppercase tracking-wide-ui px-8 py-3 rounded-[14px]"
+            className="mt-4 bg-[#3AAFA9] text-white font-ui text-lg uppercase tracking-wide-ui px-8 py-3 rounded-[14px]"
           >
             Plan intake
           </button>

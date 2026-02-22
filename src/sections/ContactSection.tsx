@@ -17,6 +17,8 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
   const formRef = useRef<HTMLDivElement>(null);
 
   const [showDialog, setShowDialog] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [formData, setFormData] = useState({
     naam: '',
     email: '',
@@ -84,10 +86,31 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
     return () => ctx.revert();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setShowDialog(true);
-    setFormData({ naam: '', email: '', onderwerp: '', bericht: '' });
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xgooapgw', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setShowDialog(true);
+        setFormData({ naam: '', email: '', onderwerp: '', bericht: '' });
+      } else {
+        setSubmitError('Er is iets misgegaan. Probeer het later opnieuw.');
+      }
+    } catch (error) {
+      setSubmitError('Er is een fout opgetreden. Controleer je internetverbinding.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -111,21 +134,21 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
             >
               <div className="text-[clamp(42px,7vw,100px)] text-white">KLAAR</div>
               <div className="text-[clamp(42px,7vw,100px)] text-white">OM TE</div>
-              <div className="text-[clamp(42px,7vw,100px)] text-[#00CED1]">STARTEN?</div>
+              <div className="text-[clamp(42px,7vw,100px)] text-[#E76F51]">STARTEN?</div>
             </div>
 
             {/* Contact Info */}
             <div ref={contactRef} className="mt-12 space-y-4">
               <div className="contact-item flex items-center gap-3 text-white/80">
-                <Mail size={20} className="text-[#00CED1]" />
+                <Mail size={20} className="text-[#3AAFA9]" />
                 <span>info@movetofit.be</span>
               </div>
               <div className="contact-item flex items-center gap-3 text-white/80">
-                <Phone size={20} className="text-[#00CED1]" />
+                <Phone size={20} className="text-[#3AAFA9]" />
                 <span>+32 471 05 26 09</span>
               </div>
               <div className="contact-item mt-6 text-white/80 text-lg font-medium">
-                Stuur 'MOVE' naar <span className="text-[#00CED1]">+32 471 05 26 09</span>
+                Stuur 'MOVE' naar <span className="text-[#F4A261]">+32 471 05 26 09</span>
               </div>
             </div>
           </div>
@@ -150,7 +173,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   value={formData.naam}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#00CED1] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#3AAFA9] focus:outline-none transition-colors"
                   placeholder="Jouw naam"
                 />
               </div>
@@ -165,7 +188,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#00CED1] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#3AAFA9] focus:outline-none transition-colors"
                   placeholder="jouw@email.be"
                 />
               </div>
@@ -179,7 +202,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   value={formData.onderwerp}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#00CED1] focus:outline-none transition-colors bg-white"
+                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#3AAFA9] focus:outline-none transition-colors bg-white"
                 >
                   <option value="">Kies een onderwerp</option>
                   <option value="coaching">Personal Coaching</option>
@@ -199,7 +222,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#00CED1] focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-[14px] border border-[#0B0F0B]/10 focus:border-[#3AAFA9] focus:outline-none transition-colors resize-none"
                   placeholder="Vertel meer over jouw doelen..."
                 />
               </div>
@@ -207,17 +230,22 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button
                   type="submit"
-                  className="group flex-1 bg-[#00CED1] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#00B8BB] transition-all flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  className="group flex-1 bg-[#3AAFA9] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#2D9B9B] transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Send size={18} />
-                  Verstuur bericht
+                  {isSubmitting ? 'Verzenden...' : 'Verstuur bericht'}
                 </button>
               </div>
+
+              {submitError && (
+                <p className="text-red-600 text-sm mt-2">{submitError}</p>
+              )}
 
               <button
                 type="button"
                 onClick={() => setShowDialog(true)}
-                className="w-full border-2 border-[#00CED1] text-[#00CED1] font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#00CED1] hover:text-white transition-all flex items-center justify-center gap-2"
+                className="w-full border-2 border-[#3AAFA9] text-[#3AAFA9] font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#3AAFA9] hover:text-white transition-all flex items-center justify-center gap-2"
               >
                 <Calendar size={18} />
                 Plan direct een intake
@@ -245,16 +273,16 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
             <h4 className="font-ui text-xs uppercase tracking-wide-ui text-white/40 mb-1">
               Navigatie
             </h4>
-            <a href="#coaching" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm">
+            <a href="#coaching" className="text-white/70 hover:text-[#3AAFA9] transition-colors text-sm">
               Coaching
             </a>
-            <a href="#groep" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm">
+            <a href="#groep" className="text-white/70 hover:text-[#3AAFA9] transition-colors text-sm">
               Groepslessen
             </a>
-            <a href="#begeleiding" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm">
+            <a href="#begeleiding" className="text-white/70 hover:text-[#3AAFA9] transition-colors text-sm">
               Begeleiding
             </a>
-            <a href="#over" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm">
+            <a href="#over" className="text-white/70 hover:text-[#3AAFA9] transition-colors text-sm">
               Over Fara
             </a>
           </div>
@@ -264,11 +292,11 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
             <h4 className="font-ui text-xs uppercase tracking-wide-ui text-white/40 mb-1">
               Contact
             </h4>
-            <a href="mailto:info@movetofit.be" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm flex items-center gap-2">
+            <a href="mailto:info@movetofit.be" className="text-white/70 hover:text-[#3AAFA9] transition-colors text-sm flex items-center gap-2">
               <Mail size={14} />
               info@movetofit.be
             </a>
-            <a href="tel:+32471052609" className="text-white/70 hover:text-[#00CED1] transition-colors text-sm flex items-center gap-2">
+            <a href="tel:+32471052609" className="text-white/70 hover:text-[#3AAFA9] transition-colors text-sm flex items-center gap-2">
               <Phone size={14} />
               +32 471 05 26 09
             </a>
@@ -288,15 +316,15 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-display text-xl">Bedankt voor je interesse!</DialogTitle>
+            <DialogTitle className="font-display text-xl">Bedankt voor je bericht!</DialogTitle>
             <DialogDescription className="text-[#3A4A3A]">
-              We nemen zo snel mogelijk contact met je op. Meestal reageren we binnen 1 werkdag.
+              We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op. Meestal reageren we binnen 1 werkdag.
             </DialogDescription>
           </DialogHeader>
           <div className="flex justify-center pt-4">
             <button
               onClick={() => setShowDialog(false)}
-              className="bg-[#00CED1] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3 rounded-[14px] hover:bg-[#00B8BB] transition-colors"
+              className="bg-[#3AAFA9] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3 rounded-[14px] hover:bg-[#2D9B9B] transition-colors"
             >
               Sluiten
             </button>

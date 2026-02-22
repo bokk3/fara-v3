@@ -55,7 +55,7 @@
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
+    background: linear-gradient(135deg, #3AAFA9 0%, #2D9B9B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -70,11 +70,23 @@
   }
   
   .text-accent {
-    color: #00CED1;
+    color: #3AAFA9;
+  }
+  
+  .text-accent-warm {
+    color: #E76F51;
   }
   
   .bg-accent {
-    background-color: #00CED1;
+    background-color: #3AAFA9;
+  }
+  
+  .bg-accent-warm {
+    background-color: #E76F51;
+  }
+  
+  .bg-accent-light {
+    background-color: #F4A261;
   }
   
   .card-shadow {

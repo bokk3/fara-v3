@@ -174,30 +174,45 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
           className="font-display font-black uppercase tracking-tight-display leading-[0.9]"
         >
           <div className="text-[clamp(42px,8vw,120px)] text-[#0B0F0B]">BEGELEIDING</div>
-          <div className="text-[clamp(42px,8vw,120px)] text-[#00CED1]">OP MAAT</div>
+          <div className="text-[clamp(42px,8vw,120px)] text-[#3AAFA9]">OP MAAT</div>
         </div>
 
         {/* Body */}
         <div ref={bodyRef} className="mt-8 max-w-lg">
           <p className="text-lg text-[#3A4A3A]">
-            Voor bedrijven, teams en organisaties die op zoek zijn naar fitte activiteiten.</p>
+            Move to Fit wil bedrijven laten inzetten op gezonde en fitte medewerkers. Ben jij coördinator of werkgever dan kan je ons contacteren voor een aanpak op maat.
+          </p>
         </div>
 
         {/* Bullets */}
         <div ref={bulletsRef} className="mt-6 flex flex-wrap gap-4">
-          {bullets.map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-2 text-[#0B0F0B]">
-              <Icon size={18} className="text-[#00CED1]" />
-              <span className="text-sm">{text}</span>
-            </div>
-          ))}
+          <div className="flex items-center gap-2 text-[#0B0F0B]">
+            <Briefcase size={18} className="text-[#3AAFA9]" />
+            <span className="text-sm">Bewegen op de werkvloer</span>
+          </div>
+          <div className="flex items-center gap-2 text-[#0B0F0B]">
+            <Coffee size={18} className="text-[#3AAFA9]" />
+            <span className="text-sm">Gezond vergaderen</span>
+          </div>
+          <div className="flex items-center gap-2 text-[#0B0F0B]">
+            <Users size={18} className="text-[#3AAFA9]" />
+            <span className="text-sm">Beweegtussendoortjes implementeren</span>
+          </div>
+          <div className="flex items-center gap-2 text-[#0B0F0B]">
+            <Briefcase size={18} className="text-[#3AAFA9]" />
+            <span className="text-sm">Tools om medewerkers fit en gezond te houden</span>
+          </div>
+          <div className="flex items-center gap-2 text-[#0B0F0B]">
+            <Users size={18} className="text-[#3AAFA9]" />
+            <span className="text-sm">Workshops op maat, Teambuilding</span>
+          </div>
         </div>
 
         {/* CTA */}
         <div ref={ctaRef} className="mt-8">
           <button
             onClick={scrollToContact}
-            className="group bg-[#00CED1] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#00B8BB] transition-all flex items-center gap-2"
+            className="group bg-[#3AAFA9] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#2D9B9B] transition-all flex items-center gap-2"
           >
             Vraag een voorstel aan
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -215,7 +230,7 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-full bg-[#F6FBF6] flex items-center justify-center flex-shrink-0">
-                <Briefcase size={16} className="text-[#00CED1]" />
+                <Briefcase size={16} className="text-[#3AAFA9]" />
               </div>
               <div>
                 <p className="font-medium text-[#0B0F0B]">Op locatie of online</p>
@@ -224,7 +239,7 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
             </li>
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-full bg-[#F6FBF6] flex items-center justify-center flex-shrink-0">
-                <Users size={16} className="text-[#00CED1]" />
+                <Users size={16} className="text-[#3AAFA9]" />
               </div>
               <div>
                 <p className="font-medium text-[#0B0F0B]">Programma's op maat</p>
@@ -233,7 +248,7 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
             </li>
             <li className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-full bg-[#F6FBF6] flex items-center justify-center flex-shrink-0">
-                <ArrowRight size={16} className="text-[#00CED1]" />
+                <ArrowRight size={16} className="text-[#3AAFA9]" />
               </div>
               <div>
                 <p className="font-medium text-[#0B0F0B]">Meetbare resultaten</p>
@@ -243,7 +258,7 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
           </ul>
           <button
             onClick={scrollToContact}
-            className="mt-6 text-[#00CED1] font-ui text-sm uppercase tracking-wide-ui hover:underline flex items-center gap-2"
+            className="mt-6 text-[#3AAFA9] font-ui text-sm uppercase tracking-wide-ui hover:underline flex items-center gap-2"
           >
             Plan een kennismaking
             <ArrowRight size={16} />
