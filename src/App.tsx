@@ -18,20 +18,10 @@ function App() {
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Wait for all sections to mount and create their ScrollTriggers
+    // Refresh ScrollTrigger after all sections mount
     const timer = setTimeout(() => {
       ScrollTrigger.refresh();
-      
-      // Create a global snap that works with the pinned sections
-      ScrollTrigger.create({
-        snap: {
-          snapTo: 'labelsDirectional',
-          duration: { min: 0.2, max: 0.5 },
-          delay: 0.1,
-          ease: 'power1.inOut',
-        },
-      });
-    }, 300);
+    }, 100);
 
     return () => {
       clearTimeout(timer);

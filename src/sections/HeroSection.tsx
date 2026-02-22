@@ -59,7 +59,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
     return () => ctx.revert();
   }, []);
 
-  // Scroll-driven exit animation (desktop only)
+  // Scroll-driven fade out animation (desktop only)
   useLayoutEffect(() => {
     // Only enable scroll animations on desktop (lg breakpoint = 1024px)
     const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
@@ -67,62 +67,18 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
     if (!isDesktop) return;
 
     const ctx = gsap.context(() => {
-      const scrollTl = gsap.timeline({
+      // Simple fade out on scroll
+      gsap.to([headlineRef.current, ctaRef.current, scrollHintRef.current], {
+        opacity: 0,
+        y: -50,
+        ease: 'power2.in',
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: '+=100%',
-          pin: true,
+          end: 'bottom top',
           scrub: 1,
-          snap: {
-            snapTo: [0, 0.5, 1],
-            duration: { min: 0.2, max: 0.4 },
-            ease: 'power1.inOut',
-          },
-          onLeaveBack: () => {
-            // Reset all elements to visible when scrolling back to top
-            const lines = headlineRef.current?.querySelectorAll('.headline-line');
-            if (lines && lines.length > 0) {
-              gsap.set(lines, {
-                x: 0,
-                opacity: 1,
-              });
-            }
-            gsap.set(ctaRef.current, { y: 0, opacity: 1 });
-            gsap.set(bgRef.current, { scale: 1, x: 0 });
-          },
         },
       });
-
-      // ENTRANCE (0%-50%): Hold - no changes (matches load end state)
-
-      // EXIT (50%-100%)
-      const lines = headlineRef.current?.querySelectorAll('.headline-line');
-      if (lines) {
-        scrollTl.to(
-          lines,
-          { x: '-55vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
-          0.5
-        );
-      }
-
-      scrollTl.to(
-        ctaRef.current,
-        { y: '10vh', opacity: 0, ease: 'power2.in', duration: 0.5 },
-        0.5
-      );
-
-      scrollTl.to(
-        bgRef.current,
-        { scale: 1.06, x: '8vw', ease: 'power2.in', duration: 0.5 },
-        0.5
-      );
-
-      scrollTl.to(
-        scrollHintRef.current,
-        { opacity: 0, ease: 'power2.in', duration: 0.3 },
-        0.5
-      );
     }, sectionRef);
 
     return () => ctx.revert();

@@ -36,104 +36,105 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
     }
 
     const ctx = gsap.context(() => {
-      const scrollTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: '+=100%',
-          pin: true,
-          scrub: 1,
-          snap: {
-            snapTo: [0, 0.5, 1],
-            duration: { min: 0.2, max: 0.4 },
-            ease: 'power1.inOut',
-          },
-        },
-      });
-
-      // ENTRANCE (0%-50%)
-      scrollTl.fromTo(
+      // Entrance animations only
+      gsap.fromTo(
         headlineRef.current,
         { x: '60vw', opacity: 0 },
-        { x: 0, opacity: 1, ease: 'power2.out', duration: 0.5 },
-        0
+        {
+          x: 0,
+          opacity: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            end: 'top 30%',
+            scrub: 1,
+          },
+        }
       );
 
-      scrollTl.fromTo(
+      gsap.fromTo(
         subheadlineRef.current,
         { x: '40vw', opacity: 0 },
-        { x: 0, opacity: 1, ease: 'power2.out', duration: 0.45 },
-        0.05
+        {
+          x: 0,
+          opacity: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            end: 'top 30%',
+            scrub: 1,
+          },
+        }
       );
 
       const chips = chipsRef.current?.querySelectorAll('.chip');
       if (chips) {
-        scrollTl.fromTo(
+        gsap.fromTo(
           chips,
           { y: 24, opacity: 0 },
-          { y: 0, opacity: 1, stagger: 0.02, ease: 'power2.out', duration: 0.4 },
-          0.1
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 70%',
+              end: 'top 30%',
+              scrub: 1,
+            },
+          }
         );
       }
 
-      scrollTl.fromTo(
+      gsap.fromTo(
         ctaRef.current,
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, ease: 'power2.out', duration: 0.35 },
-        0.15
+        {
+          y: 0,
+          opacity: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 65%',
+            end: 'top 30%',
+            scrub: 1,
+          },
+        }
       );
 
-      scrollTl.fromTo(
+      gsap.fromTo(
         cardRef.current,
         { x: '-60vw', opacity: 0, rotate: -1.5 },
-        { x: 0, opacity: 1, rotate: 0, ease: 'power2.out', duration: 0.45 },
-        0.05
+        {
+          x: 0,
+          opacity: 1,
+          rotate: 0,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            end: 'top 30%',
+            scrub: 1,
+          },
+        }
       );
 
-      scrollTl.fromTo(
+      gsap.fromTo(
         bgRef.current,
         { scale: 1.06 },
-        { scale: 1, ease: 'power2.out', duration: 0.5 },
-        0
-      );
-
-      // EXIT (50%-100%)
-      scrollTl.to(
-        headlineRef.current,
-        { x: '35vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
-        0.5
-      );
-
-      scrollTl.to(
-        subheadlineRef.current,
-        { x: '35vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
-        0.5
-      );
-
-      if (chips) {
-        scrollTl.to(
-          chips,
-          { y: '10vh', opacity: 0, ease: 'power2.in', duration: 0.5 },
-          0.5
-        );
-      }
-
-      scrollTl.to(
-        ctaRef.current,
-        { y: '10vh', opacity: 0, ease: 'power2.in', duration: 0.5 },
-        0.5
-      );
-
-      scrollTl.to(
-        cardRef.current,
-        { x: '-35vw', opacity: 0, ease: 'power2.in', duration: 0.5 },
-        0.5
-      );
-
-      scrollTl.to(
-        bgRef.current,
-        { scale: 1.05, ease: 'power2.in', duration: 0.5 },
-        0.5
+        {
+          scale: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            end: 'top 30%',
+            scrub: 1,
+          },
+        }
       );
     }, sectionRef);
 

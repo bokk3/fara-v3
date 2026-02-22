@@ -18,75 +18,70 @@ const AboutSection = ({ className = '' }: AboutSectionProps) => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const scrollTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: '+=100%',
-          pin: true,
-          scrub: 1,
-          snap: {
-            snapTo: [0, 0.5, 1],
-            duration: { min: 0.2, max: 0.4 },
-            ease: 'power1.inOut',
-          },
-        },
-      });
-
-      // ENTRANCE (0%-40%)
-      scrollTl.fromTo(
+      // Entrance animations only
+      gsap.fromTo(
         portraitRef.current,
         { x: '-60vw', opacity: 0, scale: 0.98 },
-        { x: 0, opacity: 1, scale: 1, ease: 'power2.out', duration: 0.4 },
-        0
+        {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            end: 'top 30%',
+            scrub: 1,
+          },
+        }
       );
 
-      scrollTl.fromTo(
+      gsap.fromTo(
         headlineRef.current,
         { x: '60vw', opacity: 0 },
-        { x: 0, opacity: 1, ease: 'power2.out', duration: 0.4 },
-        0.05
+        {
+          x: 0,
+          opacity: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            end: 'top 30%',
+            scrub: 1,
+          },
+        }
       );
 
-      scrollTl.fromTo(
+      gsap.fromTo(
         bodyRef.current,
         { y: 18, opacity: 0 },
-        { y: 0, opacity: 1, ease: 'power2.out', duration: 0.3 },
-        0.1
+        {
+          y: 0,
+          opacity: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 70%',
+            end: 'top 30%',
+            scrub: 1,
+          },
+        }
       );
 
-      scrollTl.fromTo(
+      gsap.fromTo(
         ctaRef.current,
         { y: 18, opacity: 0 },
-        { y: 0, opacity: 1, ease: 'power2.out', duration: 0.3 },
-        0.15
-      );
-
-      // SETTLE (40%-60%): Static
-
-      // EXIT (60%-100%)
-      scrollTl.to(
-        portraitRef.current,
-        { x: '-35vw', opacity: 0, ease: 'power2.in', duration: 0.4 },
-        0.6
-      );
-
-      scrollTl.to(
-        headlineRef.current,
-        { x: '35vw', opacity: 0, ease: 'power2.in', duration: 0.4 },
-        0.6
-      );
-
-      scrollTl.to(
-        bodyRef.current,
-        { y: '10vh', opacity: 0, ease: 'power2.in', duration: 0.4 },
-        0.6
-      );
-
-      scrollTl.to(
-        ctaRef.current,
-        { y: '10vh', opacity: 0, ease: 'power2.in', duration: 0.4 },
-        0.6
+        {
+          y: 0,
+          opacity: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 65%',
+            end: 'top 30%',
+            scrub: 1,
+          },
+        }
       );
     }, sectionRef);
 
