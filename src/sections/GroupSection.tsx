@@ -148,12 +148,6 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
     }
   };
 
-  const classes = [
-    'Start to Dance',
-    'Intervaltraining',
-    'Kracht & stabiliteit',
-  ];
-
   return (
     <section
       ref={sectionRef}

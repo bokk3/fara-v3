@@ -143,12 +143,6 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
     }
   };
 
-  const bullets = [
-    { icon: Briefcase, text: 'Bewegen op de werkvloer, gezond vergaderen' },
-    { icon: Coffee, text: 'sportdag (hele/halve dag)' },
-    { icon: Users, text: 'Workshops & teambuilding (dans, zumba, fitness, ontspanning)' },
-  ];
-
   return (
     <section
       ref={sectionRef}
