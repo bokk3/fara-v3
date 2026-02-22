@@ -122,10 +122,10 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
               </div>
               <div className="contact-item flex items-center gap-3 text-white/80">
                 <Phone size={20} className="text-[#00CED1]" />
-                <span>+32 000 00 00 00</span>
+                <span>+32 471 05 26 09</span>
               </div>
-              <div className="contact-item mt-6 text-white/60 text-sm">
-                Reageren binnen 1 werkdag.
+              <div className="contact-item mt-6 text-white/80 text-lg font-medium">
+                Stuur 'MOVE' naar <span className="text-[#00CED1]">+32 471 05 26 09</span>
               </div>
             </div>
           </div>
