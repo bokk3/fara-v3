@@ -307,7 +307,17 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
         <div className="mt-12 pt-6 border-t border-white/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-white/40 text-xs">
             <p>© {new Date().getFullYear()} Move to Fit. Alle rechten voorbehouden.</p>
-            <p>Gemaakt met ❤️ voor beweging</p>
+            <p>
+              Gemaakt met ❤️ voor beweging door{' '}
+              <a 
+                href="https://truyens.pro" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#F4A261] hover:text-[#E76F51] transition-colors"
+              >
+                truyens.pro
+              </a>
+            </p>
           </div>
         </div>
       </div>
