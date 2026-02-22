@@ -157,7 +157,7 @@ const CoachingSection = ({ className = '' }: CoachingSectionProps) => {
         {/* Body */}
         <div ref={bodyRef} className="mt-8 max-w-lg">
           <p className="text-lg text-[#3A4A3A]">
-            Move to Fit biedt sportcoaching op maat. Coach Fara helpt zich op beginnende sporters en personen die (terug) meer willen bewegen. De focus ligt op basistechnieken aanleren en een gezonde levensstijl opbouwen.
+            Move to Fit biedt sportcoaching op maat. Coach Fara focust zich op beginnende sporters en personen die (terug) meer willen bewegen. De focus ligt op basistechnieken aanleren en een gezonde levensstijl opbouwen.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <div className="flex items-center gap-2 text-[#0B0F0B]">

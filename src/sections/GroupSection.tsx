@@ -190,7 +190,7 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
             Conditiesport (Aerobics, BBB, Intervaltraining, Zumba, ...)
           </span>
           <span className="chip inline-block bg-white/90 backdrop-blur-sm text-[#0B0F0B] font-ui text-sm px-4 py-2 rounded-full border border-[#0B0F0B]/10">
-            Danslés (Start to dance, Jazz, ...)
+            Dansles (Start to dance, Jazz, ...)
           </span>
           <span className="chip inline-block bg-white/90 backdrop-blur-sm text-[#0B0F0B] font-ui text-sm px-4 py-2 rounded-full border border-[#0B0F0B]/10">
             Kracht- en stabiliteitstraining

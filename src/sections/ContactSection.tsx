@@ -143,12 +143,20 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                 <Mail size={20} className="text-[#3AAFA9]" />
                 <span>info@movetofit.be</span>
               </div>
-              <div className="contact-item flex items-center gap-3 text-white/80">
-                <Phone size={20} className="text-[#3AAFA9]" />
-                <span>+32 471 05 26 09</span>
-              </div>
-              <div className="contact-item mt-6 text-white/80 text-lg font-medium">
-                Stuur 'MOVE' naar <span className="text-[#F4A261]">+32 471 05 26 09</span>
+              
+              {/* Prominent SMS CTA */}
+              <div className="contact-item mt-8 p-6 bg-white/10 backdrop-blur-sm rounded-[20px] border-2 border-[#F4A261]">
+                <div className="flex items-start gap-3 mb-3">
+                  <Phone size={24} className="text-[#F4A261] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-white text-xl font-bold mb-2">
+                      Stuur 'MOVE' naar +32 471 05 26 09
+                    </p>
+                    <p className="text-white/70 text-sm">
+                      We bellen je zo snel mogelijk terug! (Liever geen telefoontjes, graag SMS)
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -264,7 +272,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
               Move to Fit
             </div>
             <p className="text-white/60 text-sm max-w-xs">
-              Coaching die écht bij je past. Van stilzitten naar stralen.
+               Van stilzitten naar stralen! Coaching die écht bij je past.
             </p>
           </div>
 
