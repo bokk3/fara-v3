@@ -2,14 +2,8 @@
 
 ## Step 1: Content Enhancement 📝
 
-### 1.1 Add Testimonials Section
-- [ ] Create a new `TestimonialsSection.tsx`
-- [ ] Add 3-5 client testimonials with photos
-- [ ] Include before/after stories
-- [ ] Carousel or grid layout with smooth animations
-- [ ] Place between AboutSection and QualificationsSection
 
-### 1.2 Expand Service Details
+### 1.1 Expand Service Details
 - [ ] Add pricing information (or "Contact for pricing")
 - [ ] Create detailed service cards with:
   - Duration options
