@@ -203,7 +203,7 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
             onClick={scrollToContact}
             className="group bg-[#3AAFA9] text-white font-ui text-sm uppercase tracking-wide-ui px-6 py-3.5 rounded-[14px] hover:bg-[#2D9B9B] transition-all flex items-center gap-2"
           >
-            Plan een proefles
+            Neem contact op
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
@@ -249,7 +249,7 @@ const GroupSection = ({ className = '' }: GroupSectionProps) => {
             onClick={scrollToContact}
             className="mt-6 text-[#3AAFA9] font-ui text-sm uppercase tracking-wide-ui hover:underline flex items-center gap-2"
           >
-            Vraag proefles aan
+            Meer informatie
             <ArrowRight size={16} />
           </button>
         </div>

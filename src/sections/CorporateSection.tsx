@@ -229,8 +229,8 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
                 <ArrowRight size={16} className="text-[#3AAFA9]" />
               </div>
               <div>
-                <p className="font-medium text-[#0B0F0B]">Meetbare resultaten</p>
-                <p className="text-sm text-[#3A4A3A]">Data-gedreven aanpak</p>
+                <p className="font-medium text-[#0B0F0B]">Duurzame resultaten</p>
+                <p className="text-sm text-[#3A4A3A]">Praktische aanpak op maat</p>
               </div>
             </li>
           </ul>
