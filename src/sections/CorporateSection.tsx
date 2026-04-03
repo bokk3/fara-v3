@@ -168,37 +168,21 @@ const CorporateSection = ({ className = '' }: CorporateSectionProps) => {
           className="font-display font-black uppercase tracking-tight-display leading-[0.9]"
         >
           <div className="text-[clamp(42px,8vw,120px)] text-[#0B0F0B]">BEGELEIDING</div>
-          <div className="text-[clamp(42px,8vw,120px)] text-[#3AAFA9] text-shine-subtle">OP MAAT</div>
+          <div className="text-[clamp(42px,8vw,120px)] text-[#3AAFA9] text-shine-subtle">OP VERPLAATSING</div>
         </div>
 
         {/* Body */}
         <div ref={bodyRef} className="mt-8 max-w-lg">
           <p className="text-lg text-[#3A4A3A]">
-            Move to Fit wil bedrijven laten inzetten op gezonde en fitte medewerkers. Ben jij coördinator of werkgever dan kan je ons contacteren voor een aanpak op maat.
+            Move to fit wil bedrijven, werkgevers, werknemers en/of bewoners bijstaan op pad naar een actievere werking. (Vb. beweegsessie in woonzorgcentra, beweegtussendoortjes implementeren, minder zitten, ...)
           </p>
         </div>
 
         {/* Bullets */}
         <div ref={bulletsRef} className="mt-6 flex flex-wrap gap-4">
           <div className="flex items-center gap-2 text-[#0B0F0B]">
-            <Briefcase size={18} className="text-[#3AAFA9]" />
-            <span className="text-sm">Bewegen op de werkvloer</span>
-          </div>
-          <div className="flex items-center gap-2 text-[#0B0F0B]">
-            <Coffee size={18} className="text-[#3AAFA9]" />
-            <span className="text-sm">Gezond vergaderen</span>
-          </div>
-          <div className="flex items-center gap-2 text-[#0B0F0B]">
             <Users size={18} className="text-[#3AAFA9]" />
-            <span className="text-sm">Beweegtussendoortjes implementeren</span>
-          </div>
-          <div className="flex items-center gap-2 text-[#0B0F0B]">
-            <Briefcase size={18} className="text-[#3AAFA9]" />
-            <span className="text-sm">Tools om medewerkers fit en gezond te houden</span>
-          </div>
-          <div className="flex items-center gap-2 text-[#0B0F0B]">
-            <Users size={18} className="text-[#3AAFA9]" />
-            <span className="text-sm">Workshops op maat, Teambuilding</span>
+            <span className="text-sm">Workshops op maat/teambuildingsactiviteiten</span>
           </div>
         </div>
 
